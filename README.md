@@ -215,7 +215,7 @@ MIT License - Xem file [LICENSE](LICENSE) để biết thêm chi tiết
 
 ## 👥 Team
 
-LR Foundation Team - [@hayamij](https://github.com/hayamij)
+LR Foundation Team - [@hayamij](https://github.com/hayamij) & [@thenvkhoadev](https://github.com/thenvkhoadev)
 
 ## 🌟 Acknowledgments
 
