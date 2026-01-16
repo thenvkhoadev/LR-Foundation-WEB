@@ -1,3 +1,35 @@
+
+src/
+├── main.tsx                 # Entry point của ứng dụng
+├── App.tsx                  # Root component
+├── index.css                # Global styles
+├── components/              # React components
+│   ├── Toast.tsx           # Toast notification component
+│   ├── features/           # Feature-specific components
+│   ├── layout/             # Layout components
+│   └── ui/                 # Reusable UI components
+├── config/                  # Configuration
+│   ├── constants.ts        # Constants
+│   └── theme.ts            # Theme configuration
+├── hooks/                   # Custom React hooks
+├── pages/                   # Page components
+├── types/                   # TypeScript type definitions
+└── utils/                   # Utility functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # LR Foundation WEB - Version 2.0
 
 ## 🌹 Tổng Quan
