@@ -1,35 +1,3 @@
-
-src/
-├── main.tsx                 # Entry point của ứng dụng
-├── App.tsx                  # Root component
-├── index.css                # Global styles
-├── components/              # React components
-│   ├── Toast.tsx           # Toast notification component
-│   ├── features/           # Feature-specific components
-│   ├── layout/             # Layout components
-│   └── ui/                 # Reusable UI components
-├── config/                  # Configuration
-│   ├── constants.ts        # Constants
-│   └── theme.ts            # Theme configuration
-├── hooks/                   # Custom React hooks
-├── pages/                   # Page components
-├── types/                   # TypeScript type definitions
-└── utils/                   # Utility functions
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # LR Foundation WEB - Version 2.0
 
 ## 🌹 Tổng Quan
@@ -68,47 +36,95 @@ Website Quỹ Bông Hồng Nhỏ (Little Rose Foundation) - Tái cấu trúc ho�
 ```
 LR-Foundation-WEB/
 ├── src/
-│   ├── assets/              # Frontend assets (NEW)
+│   ├── assets/                  # Frontend assets
 │   │   ├── css/
-│   │   │   └── input.css    # Tailwind base
-│   │   └── js/
-│   │       ├── index.js     # Main entry
-│   │       └── modules/     # JS modules
-│   │           ├── navigation.js
-│   │           ├── darkMode.js
-│   │           ├── animations.js
-│   │           └── forms.js
-│   ├── controllers/         # Backend controllers
-│   ├── routes/             # API routes
-│   ├── services/           # Business logic
-│   ├── middlewares/        # Express middlewares
-│   │   └── ejsLayout.middleware.js (NEW)
-│   ├── utils/              # Utilities
-│   └── config/             # Configuration
-├── views/                   # EJS Templates (REFACTORED)
-│   ├── layouts/
-│   │   └── main.ejs        # Main layout
-│   ├── partials/
-│   │   ├── header.ejs      # Reusable header
-│   │   └── footer.ejs      # Reusable footer
-│   └── pages/              # Page templates
-│       ├── home.ejs
-│       ├── about.ejs
-│       ├── programs.ejs
-│       ├── news.ejs
-│       ├── donate.ejs
-│       ├── contact.ejs
-│       └── finance.ejs
-├── public/
-│   └── dist/               # Built assets (AUTO-GENERATED)
-│       ├── css/
-│       │   └── styles.css  # Compiled Tailwind CSS
-│       └── js/
-│           └── main.bundle.js  # Bundled JavaScript
-├── webpack.config.js       # Webpack configuration (NEW)
-├── postcss.config.js       # PostCSS configuration (NEW)
-├── tailwind.config.js      # Tailwind configuration (UPDATED)
-└── package.json            # Dependencies (UPDATED)
+│   │   │   └── index.css        # Tailwind base + custom styles
+│   │   └── images/              # Image assets
+│   ├── components/              # React Components
+│   │   ├── features/            # Feature-specific components
+│   │   │   ├── admin/          # Admin dashboard components
+│   │   │   ├── auth/           # Authentication components
+│   │   │   ├── donation/       # Donation form & tracking
+│   │   │   ├── news/           # News/blog components
+│   │   │   └── programs/       # Program showcase
+│   │   ├── layout/             # Layout components
+│   │   │   ├── Header.tsx      # Navigation header
+│   │   │   ├── Footer.tsx      # Site footer
+│   │   │   ├── Sidebar.tsx     # Admin sidebar
+│   │   │   └── Layout.tsx      # Main layout wrapper
+│   │   ├── ui/                 # Reusable UI components
+│   │   │   ├── Button.tsx      # Button variants
+│   │   │   ├── Card.tsx        # Card component
+│   │   │   ├── Input.tsx       # Form inputs
+│   │   │   ├── Modal.tsx       # Modal dialogs
+│   │   │   └── Loading.tsx     # Loading states
+│   │   └── Toast.tsx           # Toast notifications
+│   ├── pages/                  # Route pages
+│   │   ├── Home.tsx            # Landing page
+│   │   ├── About.tsx           # About organization
+│   │   ├── Programs.tsx        # Programs listing
+│   │   ├── News.tsx            # News/blog page
+│   │   ├── Donate.tsx          # Donation page
+│   │   ├── Contact.tsx         # Contact form
+│   │   ├── Finance.tsx         # Financial transparency
+│   │   └── admin/              # Admin pages
+│   │       ├── Dashboard.tsx
+│   │       ├── Users.tsx
+│   │       └── Settings.tsx
+│   ├── hooks/                  # Custom React hooks
+│   │   ├── useAuth.ts          # Authentication hook
+│   │   ├── useDarkMode.ts      # Dark mode toggle
+│   │   ├── useToast.ts         # Toast notifications
+│   │   └── useApi.ts           # API calls wrapper
+│   ├── services/               # API services
+│   │   ├── api.ts              # Axios instance
+│   │   ├── authService.ts      # Auth API calls
+│   │   ├── donationService.ts  # Donation API
+│   │   └── newsService.ts      # News API
+│   ├── types/                  # TypeScript definitions
+│   │   ├── index.ts            # Common types
+│   │   ├── user.types.ts       # User types
+│   │   ├── donation.types.ts   # Donation types
+│   │   └── api.types.ts        # API response types
+│   ├── utils/                  # Utility functions
+│   │   ├── helpers.ts          # Helper functions
+│   │   ├── validators.ts       # Form validation
+│   │   └── formatters.ts       # Data formatters
+│   ├── config/                 # Configuration
+│   │   ├── constants.ts        # App constants
+│   │   └── theme.ts            # Theme configuration
+│   ├── App.tsx                 # Root component
+│   ├── main.tsx                # Application entry point
+│   ├── index.css               # Global styles
+│   ├── vite-env.d.ts           # Vite type definitions
+│   └── README.md               # Source code documentation
+│
+├── public/                     # Static assets
+│   ├── clear-storage.html      # Storage utility page
+│   └── images/                 # Public images
+│       └── images/             # Image subdirectory
+│
+├── .qodo/                      # Qodo AI configuration
+│   ├── agents/                 # AI agents
+│   └── workflows/              # Automation workflows
+│
+├── .env.example                # Environment variables template
+├── .env copy.example           # Backup env template
+├── .gitignore                  # Git ignore rules
+├── .gitignore copy             # Backup gitignore
+├── About.tsx                   # About page component (root level)
+├── eslint.config.js            # ESLint configuration
+├── index.html                  # HTML entry point
+├── LICENSE                     # License file
+├── package.json                # Dependencies & scripts
+├── postcss.config.js           # PostCSS configuration
+├── README.md                   # Project documentation
+├── tailwind.config.js          # Tailwind CSS configuration
+├── tsconfig.app.json           # TypeScript app config
+├── tsconfig.json               # TypeScript base config
+├── tsconfig.node.json          # TypeScript Node config
+├── vercel.json                 # Vercel deployment config
+└── vite.config.ts              # Vite build configuration
 ```
 
 ## 🚀 Cài Đặt
